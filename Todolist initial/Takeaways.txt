@@ -1,0 +1,24 @@
+
+-o- res.send("data") --> is used to send data only once and can be used only once in app.get();
+-o- res.write("data") --> to send multiple sets of data, we use res.write();
+
+-o- res.write() makes difficult to send every single line of html page
+    so, we use res.sendFile(__dirname + "index.html");
+
+
+    The best way is to use some Templation engine such as EJS;
+
+
+-o- when we (require) anything it will run that File
+    eg: 
+        //temp.js File
+
+        console.log(module);
+        console.log("Hello World");
+
+        // app.js File
+
+        const temp = require("/temp.js")
+
+        --> So here, when we run our app, it will automatically run temp.js File
+        
